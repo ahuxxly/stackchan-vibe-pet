@@ -4,9 +4,18 @@
 #include <cassert>
 #include <cstdio>
 using namespace local_audio;
-template<class Predicate> void waitFor(Predicate predicate,unsigned deadline=8500){
- const unsigned start=millis();while(!predicate()){assert(millis()-start<deadline);std::this_thread::sleep_for(std::chrono::milliseconds(1));}
+template<class Predicate> void waitForAt(int line,Predicate predicate,unsigned deadline=8500){
+ const unsigned start=millis();while(!predicate()){
+  if(millis()-start>=deadline){
+   const auto a=snapshot();const auto d=diagnostics();
+   std::fprintf(stderr,"wait at line %d timed out after %u ms: phase=%s error=%s samples=%u recordCalls=%d pending=%d allowed=%d cancel=%d working=%d\n",
+    line,millis()-start,name(a.phase),name(a.error),a.samples,recordCalls.load(),int(d.pending),d.allowed,d.cancelPending,d.working);
+   std::abort();
+  }
+  std::this_thread::sleep_for(std::chrono::milliseconds(1));
+ }
 }
+#define waitFor(...) waitForAt(__LINE__,__VA_ARGS__)
 int main(){
  failAudioMemory=true;assert(!begin());failAudioMemory=false;
  failWorker=true;assert(!begin() && !audioTestMemory);failWorker=false;

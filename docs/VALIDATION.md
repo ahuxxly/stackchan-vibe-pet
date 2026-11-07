@@ -9,7 +9,7 @@ Validated locally on 2026-11-07 for the `0.1.11-power1` source export. These che
 - LittleFS package: **PASS**, all 211 files unpacked and matched byte-for-byte.
 - Host regression suite: **PASS**, 28 entry points including real-source driver tests, model-based failure injection, rendering, audio ownership, HID freshness and motion interlocks.
 - Python unit suite: **PASS**, 29 tests covering resource corruption, release guards, USB patching and firmware version identity.
-- Source preservation: **PASS**, all 35 firmware source files match the latest local development source byte-for-byte. Only public packaging, documentation, sanitized resource metadata and test-fixture paths were adapted; release builds ignore private configuration headers.
+- Source preservation: **PASS**, all 35 firmware source files match the latest local development source byte-for-byte. Only public packaging, documentation, sanitized resource metadata and host-test portability were adapted; release builds ignore private configuration headers.
 - Publication privacy checks: **PASS**, reviewed allowlist, synthetic-only test identities, image metadata review and Gitleaks 8.30.1 scan. No detected secrets. Automated scans cannot guarantee detection of every secret format.
 - Fresh CI: the repository workflow rebuilds and runs host/Python tests on each pushed commit. Check the run for the exact commit you intend to use.
 
