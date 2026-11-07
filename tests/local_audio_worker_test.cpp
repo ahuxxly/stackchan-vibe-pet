@@ -41,7 +41,9 @@ int main(){
  micDelay=250;int captures=recordCalls;int micStarts=micCalls;
  assert(request(Command::Record));waitFor([&]{return micCalls>micStarts;});
  auto start=millis();unsigned safetyTicks=0;
- while(millis()-start<100){snapshot();++safetyTicks;std::this_thread::sleep_for(std::chrono::milliseconds(1));}
+ // Measure foreground API responsiveness, not the host OS sleep granularity.
+ // Yield to the codec worker without adding an artificial timer to every poll.
+ while(millis()-start<100){snapshot();++safetyTicks;std::this_thread::yield();}
  assert(safetyTicks>30);allowPage(false);waitFor([]{return !busy();});
  assert(recordCalls==captures && owner==0&&!snapshot().ready);micDelay=0;
  // No tone queued when screen is switched off during amplifier startup.
