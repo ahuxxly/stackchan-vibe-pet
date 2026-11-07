@@ -12,9 +12,12 @@ struct FakeMic {
  AudioConfig cfg;std::atomic<bool> running{false};size_t pending=0;int16_t* buffer=nullptr;unsigned completeAt=0;
  AudioConfig config(){return cfg;}void config(AudioConfig c){cfg=c;}
  bool isRunning(){return running.load();}
- bool begin(){++micCalls;assert(owner.exchange(1)==0);std::this_thread::sleep_for(std::chrono::milliseconds(micDelay.load()));running=true;return true;}
- void end(){assert(owner.load()==1);owner=0;running=false;pending=0;}
- bool record(int16_t* p,size_t n,uint32_t rate,bool stereo){assert(running && !pending && rate==16000&&!stereo);++recordCalls;pending=n;buffer=p;completeAt=millis()+20;return true;}
+ bool begin(){++micCalls;assert(owner.exchange(1)==0);std::this_thread::sleep_for(std::chrono::milliseconds(micDelay.load()));completeAt=millis();running=true;return true;}
+ void end(){assert(owner.load()==1);owner=0;running=false;pending=0;completeAt=0;}
+ bool record(int16_t* p,size_t n,uint32_t rate,bool stereo){assert(running && !pending && rate==16000&&!stereo);++recordCalls;pending=n;buffer=p;// DMA samples arrive continuously, independently of host polling latency.
+ // Keep the sample-clock deadline cumulative so delayed worker polls can
+ // consume data already captured instead of restarting a 20ms timer.
+ assert(n==320);completeAt+=static_cast<unsigned>(n*1000/rate);return true;}
  size_t pendingSamples(){if(pending && int32_t(millis()-completeAt)>=0){for(size_t i=0;i<pending;++i)buffer[i]=(i%2)?1000:-1000;pending=0;}return pending;}
  bool captureFailed(){return false;}
 };
