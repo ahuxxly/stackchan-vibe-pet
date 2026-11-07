@@ -1,0 +1,1060 @@
+{
+  "schema": 1,
+  "character": "Lumi / 浮光",
+  "fps": 8,
+  "frame_size": [
+    168,
+    168
+  ],
+  "frames_per_state": 8,
+  "native_tool": "image_gen.imagegen",
+  "postprocessing": "crop, body registration, uniform scaling, JPEG encoding; no character redrawing",
+  "states": [
+    {
+      "id": 0,
+      "key": "idle",
+      "title": "待机呼吸",
+      "source": "local",
+      "trigger": "没有更高优先级真实或本地状态时的陪伴动画",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/idle_0.jpg",
+          "bytes": 3966,
+          "sha256": "da94dd1d8de5454ae3d5fc2013d7911e14c8c65baae4633c1d8f631814ad4e38",
+          "crc32": 2990394921
+        },
+        {
+          "file": "lumi/idle_1.jpg",
+          "bytes": 4103,
+          "sha256": "81b3858f72619653ad7d434812987ebb9225ff305dd2c6bd2d0e853220ec1b71",
+          "crc32": 3259670706
+        },
+        {
+          "file": "lumi/idle_2.jpg",
+          "bytes": 4110,
+          "sha256": "e3d9449316450e519acc257bf06a6d700afd4fbfe195960f0ec91e5bf25fcac6",
+          "crc32": 1750915734
+        },
+        {
+          "file": "lumi/idle_3.jpg",
+          "bytes": 4287,
+          "sha256": "f4ccf8172fdf49081ceadc426fca760717c5e29790b2d7d0a11a2d6f79802122",
+          "crc32": 2357724225
+        },
+        {
+          "file": "lumi/idle_4.jpg",
+          "bytes": 4003,
+          "sha256": "0ce2be8e415abaae3f8ea44a6da7418cf77d25298671c3b5ec1fa3c3df56fef6",
+          "crc32": 2473878200
+        },
+        {
+          "file": "lumi/idle_5.jpg",
+          "bytes": 4035,
+          "sha256": "731c84364b226984683114b774b05f3f94f6da8b023a999c73c2982cf7170edf",
+          "crc32": 3608418082
+        },
+        {
+          "file": "lumi/idle_6.jpg",
+          "bytes": 4061,
+          "sha256": "9262106b6edab4bfe2cb6db2f145afb3431a9ab1004d256154f08fc11d123554",
+          "crc32": 2259007363
+        },
+        {
+          "file": "lumi/idle_7.jpg",
+          "bytes": 4038,
+          "sha256": "e5e3e47e900d5c08bc2ef17c183cab4b9cfa44e47ddd8ba33984b0f870e89241",
+          "crc32": 2132032427
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "key": "blink",
+      "title": "眨眼",
+      "source": "local",
+      "trigger": "待机时低频自然眨眼",
+      "playback": "once",
+      "frames": [
+        {
+          "file": "lumi/blink_0.jpg",
+          "bytes": 4204,
+          "sha256": "4faf1cea5a632f904c09e3ec9a22253267ff69e5732bd16ebb091d447f284b28",
+          "crc32": 1425487496
+        },
+        {
+          "file": "lumi/blink_1.jpg",
+          "bytes": 4150,
+          "sha256": "9d647b4e44bc429158eacb4c6e5ab7dcd4288d14288facdad2f0c0e8a0933e37",
+          "crc32": 891637124
+        },
+        {
+          "file": "lumi/blink_2.jpg",
+          "bytes": 4105,
+          "sha256": "aabd9c8364dd58d991303bcab043cf98866f199d045559e34077a416fa0558ce",
+          "crc32": 1436528592
+        },
+        {
+          "file": "lumi/blink_3.jpg",
+          "bytes": 3882,
+          "sha256": "12c528344db33b2331be7d87aa11c856276acf59071d1f8145ef8a9c99827d73",
+          "crc32": 631241864
+        },
+        {
+          "file": "lumi/blink_4.jpg",
+          "bytes": 3787,
+          "sha256": "2fab36854d500634eb565cc91f88fa99b48c12bb8f5d88bd9058a26aee7fb12d",
+          "crc32": 1305926946
+        },
+        {
+          "file": "lumi/blink_5.jpg",
+          "bytes": 4157,
+          "sha256": "529136481c8fc4ee62ed14ffd3d76aa71468be7a5639180fd6d4b6d3670624fa",
+          "crc32": 3773076285
+        },
+        {
+          "file": "lumi/blink_6.jpg",
+          "bytes": 4167,
+          "sha256": "d48e2452b381c75cf1124258120f163055db3ed89cb8c1ef55a59c28fb182950",
+          "crc32": 3949800330
+        },
+        {
+          "file": "lumi/blink_7.jpg",
+          "bytes": 4152,
+          "sha256": "2c824b6ef82677f80384da82e98ac7cb8c797daa19eae0f3f24af3734e45df07",
+          "crc32": 1741524123
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "key": "look",
+      "title": "张望",
+      "source": "local",
+      "trigger": "实际张望动作的视线方向；预览不驱动舵机",
+      "playback": "loop",
+      "frames": [
+        {
+          "file": "lumi/look_0.jpg",
+          "bytes": 4173,
+          "sha256": "ae5b53ee8821ca092fa6e261cfd7737450a28aaf40dcc085677091f6ccf94477",
+          "crc32": 2887441173
+        },
+        {
+          "file": "lumi/look_1.jpg",
+          "bytes": 4156,
+          "sha256": "2982d1c9cf8762cfa3cfed726e13e3551aa965355bd69d268aa2953d3cd57a7d",
+          "crc32": 2755563720
+        },
+        {
+          "file": "lumi/look_2.jpg",
+          "bytes": 4156,
+          "sha256": "59e72562938d98cbec97536c21ca65802a811bb96ba367b9f901cd040310552d",
+          "crc32": 2090240760
+        },
+        {
+          "file": "lumi/look_3.jpg",
+          "bytes": 4210,
+          "sha256": "5e30b30b6afcb97eb79920787ed534b7cd0f67dddada7d34424721ea1e51fcb6",
+          "crc32": 1732295350
+        },
+        {
+          "file": "lumi/look_4.jpg",
+          "bytes": 4224,
+          "sha256": "32c3823ede5338fa7494d4c636066eb58fe9db76132f8dc071180fa5dd9596ed",
+          "crc32": 1741408341
+        },
+        {
+          "file": "lumi/look_5.jpg",
+          "bytes": 4116,
+          "sha256": "9b8f26f36b9b7634fdfb0b2f7682d3bf43690c7d9d155cf52e7551cca1bbe32c",
+          "crc32": 2580568182
+        },
+        {
+          "file": "lumi/look_6.jpg",
+          "bytes": 4193,
+          "sha256": "f538dd9ff206d5224f15c26859bef9d9b1a3d1c3c0370e356d1ce82dec34cca5",
+          "crc32": 3888416724
+        },
+        {
+          "file": "lumi/look_7.jpg",
+          "bytes": 4174,
+          "sha256": "04f157e2e1f28f067bec36456cf0a1b620cf67e49e4576633161175b0bc51bb8",
+          "crc32": 3627415160
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "key": "listen",
+      "title": "倾听",
+      "source": "preview",
+      "trigger": "仅展示库，不启用录音或语音服务",
+      "playback": "loop",
+      "frames": [
+        {
+          "file": "lumi/listen_0.jpg",
+          "bytes": 4053,
+          "sha256": "44cdcfe4ef7f99e5f112802279e6a5ec4ccdea229e377dd1ccb007003047f311",
+          "crc32": 141485638
+        },
+        {
+          "file": "lumi/listen_1.jpg",
+          "bytes": 4083,
+          "sha256": "efe295e96ba98f77d5f2e4e55822dc463c563faab1d4d09286a4e2e97f130ac4",
+          "crc32": 29476620
+        },
+        {
+          "file": "lumi/listen_2.jpg",
+          "bytes": 4106,
+          "sha256": "0daa37d9b8ebb4a17cc2c2a77e66604e04af26e831ed74a861e294704421a91f",
+          "crc32": 3406692649
+        },
+        {
+          "file": "lumi/listen_3.jpg",
+          "bytes": 4128,
+          "sha256": "a4781249a1fd67400b0aec27d5bc4a5f99909ab5d2d87308b58c4872f7c46cd0",
+          "crc32": 1235241296
+        },
+        {
+          "file": "lumi/listen_4.jpg",
+          "bytes": 4053,
+          "sha256": "d0f01e811d32860a47a0d0d6d23a40a4adf1d6db7ebb63f30f9dc136234e45e7",
+          "crc32": 1727687201
+        },
+        {
+          "file": "lumi/listen_5.jpg",
+          "bytes": 4080,
+          "sha256": "471148d83c7e581ba13ea79ccce09480d4657bfbf8f7c6cdad806f818abb1578",
+          "crc32": 3684951493
+        },
+        {
+          "file": "lumi/listen_6.jpg",
+          "bytes": 4075,
+          "sha256": "3d3e6a942f8deb4723d27252f6c26bb2884a3c2ceee1666e2d5b89369b392d5b",
+          "crc32": 1631965716
+        },
+        {
+          "file": "lumi/listen_7.jpg",
+          "bytes": 4112,
+          "sha256": "c9d669b48d9de8eeb2e4725cb8babfca9fae90c121cae0911fc20284b0a09e66",
+          "crc32": 1936158802
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "key": "think",
+      "title": "思考",
+      "source": "host",
+      "trigger": "新鲜蓝色工作状态的开场视觉，不表示读取具体任务内容",
+      "playback": "loop",
+      "frames": [
+        {
+          "file": "lumi/think_0.jpg",
+          "bytes": 4045,
+          "sha256": "871689e7fefb974a03e412ff347af437c19fef82414dbd9161617017ec75d768",
+          "crc32": 633879998
+        },
+        {
+          "file": "lumi/think_1.jpg",
+          "bytes": 4087,
+          "sha256": "4c67cba91393fd8a33c51661880876401ddc78fe7a146f31bc0f29fe292e989b",
+          "crc32": 4225278139
+        },
+        {
+          "file": "lumi/think_2.jpg",
+          "bytes": 4153,
+          "sha256": "1029756da27bcd754cc71c21e3cccf7fa420da84e9cfc3c6aec36467e8ff8343",
+          "crc32": 2140960856
+        },
+        {
+          "file": "lumi/think_3.jpg",
+          "bytes": 4293,
+          "sha256": "fb7c86abb80fdab4c846d00c99973ec6ec6e3ee2636df75a80baea604bbf80e1",
+          "crc32": 1831098190
+        },
+        {
+          "file": "lumi/think_4.jpg",
+          "bytes": 4428,
+          "sha256": "16f6f417c83fc268bbfd58cb55e38c6d67d0b9cd1da5833c3840f662edd43827",
+          "crc32": 2886473040
+        },
+        {
+          "file": "lumi/think_5.jpg",
+          "bytes": 4140,
+          "sha256": "1a38f3afdd10b9a0738f9e53f266ff08a7ffcba76fb61996dc78160f6f8d4f39",
+          "crc32": 2480189629
+        },
+        {
+          "file": "lumi/think_6.jpg",
+          "bytes": 4086,
+          "sha256": "f3eb1da0e05737e03369e29c59d082f04e6e20e12f42a3b383cdf28f90e3ea43",
+          "crc32": 6867069
+        },
+        {
+          "file": "lumi/think_7.jpg",
+          "bytes": 4098,
+          "sha256": "22f206a1ccaf14707694548fb90115a46230141fb9c1b12bfa794737654e7a77",
+          "crc32": 2333554150
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "key": "focus",
+      "title": "专注",
+      "source": "host",
+      "trigger": "同一新鲜蓝色工作状态的后续视觉，不推断读写文件动作",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/focus_0.jpg",
+          "bytes": 4396,
+          "sha256": "db1b9b286742c2c89b8b298947f8db293a3b07e3b3ebbc037656c943d174e278",
+          "crc32": 561908385
+        },
+        {
+          "file": "lumi/focus_1.jpg",
+          "bytes": 4367,
+          "sha256": "92a1115b27f5b8e1321a72ca8df6fd7980800430e1ca12a05eba154fd06f5bcb",
+          "crc32": 2796063322
+        },
+        {
+          "file": "lumi/focus_2.jpg",
+          "bytes": 4440,
+          "sha256": "ca607006e3f72d987fb22bf505e766e67de3858cc95e297dd857d99895f4501f",
+          "crc32": 1837322373
+        },
+        {
+          "file": "lumi/focus_3.jpg",
+          "bytes": 4361,
+          "sha256": "9cd37b3c856e003c40d57a12eb283de33d8d6cf8688ed540f5b7df3fa94d6fff",
+          "crc32": 814383845
+        },
+        {
+          "file": "lumi/focus_4.jpg",
+          "bytes": 4208,
+          "sha256": "eb4bce06ae20ed70fcbdd26327caa4b826e80cb33f71f01628599e056f597388",
+          "crc32": 4253615664
+        },
+        {
+          "file": "lumi/focus_5.jpg",
+          "bytes": 4193,
+          "sha256": "a42bf7e217aa707d010fd1d651e054bd3f5adc32e288eb39dc0818b3cd7de149",
+          "crc32": 3871569602
+        },
+        {
+          "file": "lumi/focus_6.jpg",
+          "bytes": 4261,
+          "sha256": "18597a716235ba2bb09e41a18b8ef60e7c17ef297b3ef08247cf6b0fe5082a03",
+          "crc32": 3847648447
+        },
+        {
+          "file": "lumi/focus_7.jpg",
+          "bytes": 4254,
+          "sha256": "b090ba32aa1c302432cc7553a1d1b17eef6c70767301db9fda7529484fac6172",
+          "crc32": 4098765502
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "key": "wait",
+      "title": "等你回应",
+      "source": "host",
+      "trigger": "新鲜橙色状态；角色不会批准，批准仍需原专用控制",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/wait_0.jpg",
+          "bytes": 4107,
+          "sha256": "8bc609de21b9e27f584c7dc82175122033e261772e205ee24348edb09c90576d",
+          "crc32": 1238012702
+        },
+        {
+          "file": "lumi/wait_1.jpg",
+          "bytes": 4077,
+          "sha256": "bc518a0b19f960a179e58ae084de680367962dc8ace11b3bf306dee2846945dd",
+          "crc32": 4209980096
+        },
+        {
+          "file": "lumi/wait_2.jpg",
+          "bytes": 4104,
+          "sha256": "e0fb5ce6600faf68636f8ca213050cbf9ae1aa7871f0c3c157572ed0b47994ed",
+          "crc32": 1628102062
+        },
+        {
+          "file": "lumi/wait_3.jpg",
+          "bytes": 3849,
+          "sha256": "01feffc20cc265ad687981b2a174621355983f7093c985aa7628fb8f9c2d7cce",
+          "crc32": 366482389
+        },
+        {
+          "file": "lumi/wait_4.jpg",
+          "bytes": 3889,
+          "sha256": "d6ccde0c239859a05facc2d8c80a09ca008d53f30d0a69875e070dcc34cbcf9e",
+          "crc32": 1120275832
+        },
+        {
+          "file": "lumi/wait_5.jpg",
+          "bytes": 4164,
+          "sha256": "7f29126c08b6460785c5cd8089b37938b83acc120479c8f17ab63218d62742e9",
+          "crc32": 3227165333
+        },
+        {
+          "file": "lumi/wait_6.jpg",
+          "bytes": 4192,
+          "sha256": "fdcf4b072c4073f5fe552f628ef2bb266c1396c199c07a22c4b49a8773416d23",
+          "crc32": 3217478368
+        },
+        {
+          "file": "lumi/wait_7.jpg",
+          "bytes": 4209,
+          "sha256": "427a18b30c2ca759627fa53c82e9b1712ce32d1ea2ba6a4d8e3c6968abea84d8",
+          "crc32": 4078687015
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "key": "celebrate",
+      "title": "完成庆祝",
+      "source": "host",
+      "trigger": "新鲜绿色状态，仅表达已收到的主机颜色语义",
+      "playback": "once",
+      "frames": [
+        {
+          "file": "lumi/celebrate_0.jpg",
+          "bytes": 4174,
+          "sha256": "304e7454f293841f095cb739e71f63e0b3a7ea7869e6202eaa508ab2636b2287",
+          "crc32": 430837231
+        },
+        {
+          "file": "lumi/celebrate_1.jpg",
+          "bytes": 3964,
+          "sha256": "2a77c4f2b37163561359ea4609e0346a3b444cda30bc9059d41a400f2a3684e0",
+          "crc32": 3006028571
+        },
+        {
+          "file": "lumi/celebrate_2.jpg",
+          "bytes": 4243,
+          "sha256": "074038ba3d65e24d55cd273078da5245ce8c98a7f9b286671e9bb185d6b3e17c",
+          "crc32": 3306028430
+        },
+        {
+          "file": "lumi/celebrate_3.jpg",
+          "bytes": 4568,
+          "sha256": "b9232bb99499d91cab6d1436a7ec0354b81950e96651146915156560231310da",
+          "crc32": 979362018
+        },
+        {
+          "file": "lumi/celebrate_4.jpg",
+          "bytes": 4807,
+          "sha256": "43499636493eab5be6b48845f1c821b848d6abf1ee0e07b836f62003a425ac1b",
+          "crc32": 3369025348
+        },
+        {
+          "file": "lumi/celebrate_5.jpg",
+          "bytes": 4519,
+          "sha256": "e5e01772b159501c32b19c86ee5d821589cfa85bde469c90ca93befcd93c5056",
+          "crc32": 3109370672
+        },
+        {
+          "file": "lumi/celebrate_6.jpg",
+          "bytes": 4078,
+          "sha256": "144799f1eb1a8867e18ddf459e412bab0c6d9c6f1cf548b067711e73ba16af70",
+          "crc32": 2823314595
+        },
+        {
+          "file": "lumi/celebrate_7.jpg",
+          "bytes": 4085,
+          "sha256": "42adbb17b15aed955cea1f422150662675906d05fe201d95520009a44aad1bb1",
+          "crc32": 2398212444
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "key": "blocked",
+      "title": "错误阻塞",
+      "source": "host",
+      "trigger": "新鲜红色状态，不读取错误/对话正文",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/blocked_0.jpg",
+          "bytes": 4100,
+          "sha256": "b5efd2a1d7988c40cbcf05e0bf88172a26d088e999766963c31fa88e88f80eb2",
+          "crc32": 1971686024
+        },
+        {
+          "file": "lumi/blocked_1.jpg",
+          "bytes": 4146,
+          "sha256": "9ee05d364f106f20f55ebfe1c4aea57736d4e305b2da0978dc68cd17430153e7",
+          "crc32": 1171309281
+        },
+        {
+          "file": "lumi/blocked_2.jpg",
+          "bytes": 4147,
+          "sha256": "81a7dd680a0592ab327bca833e325437d6da69022dd8a7150c30d756bd10773c",
+          "crc32": 1763596179
+        },
+        {
+          "file": "lumi/blocked_3.jpg",
+          "bytes": 4305,
+          "sha256": "cdd40ebda5fd005183d469a0bfa92ed2462fb3152cf1e5c51058779191631c20",
+          "crc32": 4193292865
+        },
+        {
+          "file": "lumi/blocked_4.jpg",
+          "bytes": 4177,
+          "sha256": "e6953066884ccaa96a950284bd8ebae8b16155e66f9a48b502a3b08f7744a4af",
+          "crc32": 31382179
+        },
+        {
+          "file": "lumi/blocked_5.jpg",
+          "bytes": 4163,
+          "sha256": "7b459925320496d6b61ba8ef14bd08288b30bde22766362b5747649851a81daa",
+          "crc32": 1609267510
+        },
+        {
+          "file": "lumi/blocked_6.jpg",
+          "bytes": 4159,
+          "sha256": "f6583306a665eedbc35a4764dd79ba9fb0b4c0f46b2e4e5100cdbe61b943f63f",
+          "crc32": 2292588341
+        },
+        {
+          "file": "lumi/blocked_7.jpg",
+          "bytes": 4186,
+          "sha256": "fa9eb94d6586562c79ded814cb2d8b3e51b9eb138c93d3a3754fb8ed51916313",
+          "crc32": 449592813
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "key": "disconnected",
+      "title": "暂时离线",
+      "source": "host",
+      "trigger": "未知内容或通信中断，不伪装工作",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/disconnected_0.jpg",
+          "bytes": 4253,
+          "sha256": "ed1e82d5c230acb80b727f9cb641e80228ae412258626c212817402f9b8154df",
+          "crc32": 2277560776
+        },
+        {
+          "file": "lumi/disconnected_1.jpg",
+          "bytes": 4232,
+          "sha256": "f232dd42377b9cbc5b9bcc7c8713348422e3d801408253dbcf16da2e9ff23f2e",
+          "crc32": 1517437874
+        },
+        {
+          "file": "lumi/disconnected_2.jpg",
+          "bytes": 4286,
+          "sha256": "eac75a0d8bc9898168e848fcd386dd4067d110a7af515bb8f0ab5b63a5bb1b9a",
+          "crc32": 561728520
+        },
+        {
+          "file": "lumi/disconnected_3.jpg",
+          "bytes": 4306,
+          "sha256": "cb9b700672f9049e6afe9da7631718954da41fc936c6997ff064e506e3d7b5d4",
+          "crc32": 346812011
+        },
+        {
+          "file": "lumi/disconnected_4.jpg",
+          "bytes": 4159,
+          "sha256": "1f924a601af9d47195beca74a7908600332a53b4a5c009176ff2ec2dfb301655",
+          "crc32": 3803741442
+        },
+        {
+          "file": "lumi/disconnected_5.jpg",
+          "bytes": 4222,
+          "sha256": "f25a4841aab2960b3e45f533d380e5fb7fb565f6f346a40f2280efd44fda4cee",
+          "crc32": 2926174866
+        },
+        {
+          "file": "lumi/disconnected_6.jpg",
+          "bytes": 4191,
+          "sha256": "55b51f1adfdaf3e6ff7c6b2c99d5505c11b5f62feb025ab2f0d3b312349eacce",
+          "crc32": 2372192134
+        },
+        {
+          "file": "lumi/disconnected_7.jpg",
+          "bytes": 4186,
+          "sha256": "4fb8025ee3aea9957d346bcc62c47936954cda39f13b9973fa49eb53b703c1b6",
+          "crc32": 1845288956
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "key": "cached",
+      "title": "上次状态",
+      "source": "host",
+      "trigger": "显示CACHED时的安静视觉，明确不新鲜、无审批资格",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/cached_0.jpg",
+          "bytes": 4226,
+          "sha256": "4b6df7dcf170ebade4805d734a23dd90601d020dd048278fd1cb4a1d13fe0265",
+          "crc32": 1417442792
+        },
+        {
+          "file": "lumi/cached_1.jpg",
+          "bytes": 4201,
+          "sha256": "d8df297155e117534fb5aa3487e20f9e0a50f390906e9d5365d39818e0dc1065",
+          "crc32": 555515707
+        },
+        {
+          "file": "lumi/cached_2.jpg",
+          "bytes": 4200,
+          "sha256": "8e4bc6625763d6e5aabc998a2658081f8bc001cb4a43cd7bad220fc39b80a045",
+          "crc32": 3179941113
+        },
+        {
+          "file": "lumi/cached_3.jpg",
+          "bytes": 4028,
+          "sha256": "572b6f49a03d68306c2fa699ff1fe1e22d83001b5b8526c53e2853bc24267ef4",
+          "crc32": 416718476
+        },
+        {
+          "file": "lumi/cached_4.jpg",
+          "bytes": 3949,
+          "sha256": "17465d5853e4bcdc78c5d080485faaf08d5ab5810441e82e2447b9e5b29825ad",
+          "crc32": 4085243725
+        },
+        {
+          "file": "lumi/cached_5.jpg",
+          "bytes": 4180,
+          "sha256": "70250fe8ae0730f43e9e57ae54c88d7979ee778fab7c311ccb815d7e296086a7",
+          "crc32": 358687312
+        },
+        {
+          "file": "lumi/cached_6.jpg",
+          "bytes": 4173,
+          "sha256": "9f56d665899db682dc0c9c320f3a74f93e617980149701b84507b4fb85c15dca",
+          "crc32": 1258380032
+        },
+        {
+          "file": "lumi/cached_7.jpg",
+          "bytes": 4162,
+          "sha256": "01f20cb7beeef6e021d81dd2be78f4022ee5361c98d10d2c88449ea4adc25542",
+          "crc32": 3381127546
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "key": "sleep",
+      "title": "休息睡眠",
+      "source": "preview",
+      "trigger": "生活展示库；不代表系统睡眠/日历或用户状态",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/sleep_0.jpg",
+          "bytes": 3747,
+          "sha256": "81282fa0a5c1c9a7cdda7a1db8e915be06b31dc3ed1c1432272023abfe7be5d6",
+          "crc32": 365230332
+        },
+        {
+          "file": "lumi/sleep_1.jpg",
+          "bytes": 3887,
+          "sha256": "853ce91560ed8a509b9b62d4d5aec99344a8fdf30a94c5c7503fba40686665b8",
+          "crc32": 1116778205
+        },
+        {
+          "file": "lumi/sleep_2.jpg",
+          "bytes": 3906,
+          "sha256": "6b0ea50d3cb6ad43335a98722b3ccf7f57ee99d3e1312e329bb1ed2bae11a04e",
+          "crc32": 1231559543
+        },
+        {
+          "file": "lumi/sleep_3.jpg",
+          "bytes": 4007,
+          "sha256": "98fb04681fb2e5d7db32699f7aa3b5c05e53206079f0827411cc7744d181a9cf",
+          "crc32": 4217060852
+        },
+        {
+          "file": "lumi/sleep_4.jpg",
+          "bytes": 3925,
+          "sha256": "4c2c75369eea5344786180b42426e80c9aaa352c89145b84db5bd28a966a80ff",
+          "crc32": 4088766042
+        },
+        {
+          "file": "lumi/sleep_5.jpg",
+          "bytes": 3845,
+          "sha256": "59e80d722128b69170b8d3562285385b8af8448508663dc3cfa53d364ecb0b29",
+          "crc32": 271226949
+        },
+        {
+          "file": "lumi/sleep_6.jpg",
+          "bytes": 3853,
+          "sha256": "e772de00fcf303e0dcbf17685be83b91bd0fb4b535112bcd2ff4c26783483a27",
+          "crc32": 4000247604
+        },
+        {
+          "file": "lumi/sleep_7.jpg",
+          "bytes": 3879,
+          "sha256": "5a5c740b5163f3cae8635ef597efa8c0cadaa76819335680204bc015eaed7615",
+          "crc32": 712491136
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "key": "pet",
+      "title": "抚摸开心",
+      "source": "local",
+      "trigger": "已存在的后脑触摸和表情路径；无HID审批",
+      "playback": "loop",
+      "frames": [
+        {
+          "file": "lumi/pet_0.jpg",
+          "bytes": 4399,
+          "sha256": "4248f81affdf3de9c5e56a61580f48ee8794b7268f67620f9d3fdb25ad8ab916",
+          "crc32": 3870403264
+        },
+        {
+          "file": "lumi/pet_1.jpg",
+          "bytes": 4092,
+          "sha256": "8fef471fba46f6aa4ccbfb325b0352f16e766ab2ae8798803dd72c8884c2bc8c",
+          "crc32": 2872307286
+        },
+        {
+          "file": "lumi/pet_2.jpg",
+          "bytes": 4063,
+          "sha256": "dfa07a33fae7b0455327419b835b86c147a89e60ab13aaa84cf510f19cdd9147",
+          "crc32": 2301824222
+        },
+        {
+          "file": "lumi/pet_3.jpg",
+          "bytes": 4203,
+          "sha256": "853a50229529fd1c1ec4894a71478d93bdd526fc1015d73a462a637253275e07",
+          "crc32": 2720337124
+        },
+        {
+          "file": "lumi/pet_4.jpg",
+          "bytes": 4096,
+          "sha256": "f8516c0cae71cf850cc049f8c24b2f32fe15e91315f912a691a025ee0d0556c4",
+          "crc32": 1866119397
+        },
+        {
+          "file": "lumi/pet_5.jpg",
+          "bytes": 4242,
+          "sha256": "486da1ed4f19baaf33fa84e27c59522ccb96cdda65492dfe42daf5a8d1cd0619",
+          "crc32": 2102171992
+        },
+        {
+          "file": "lumi/pet_6.jpg",
+          "bytes": 4396,
+          "sha256": "6b8b42338a9dcd70fef0a9b1dcba1ad695b64639fb1c251f7cc690d706b3147f",
+          "crc32": 3083027240
+        },
+        {
+          "file": "lumi/pet_7.jpg",
+          "bytes": 4487,
+          "sha256": "d9fd05c690f3a285637782091e2af40aee6e8dafe3a90b869a9f30656ffac4a8",
+          "crc32": 2223750231
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "key": "dizzy",
+      "title": "眩晕恢复",
+      "source": "local",
+      "trigger": "实际安全检测允许的情绪反馈；预览不触发舵机",
+      "playback": "once",
+      "frames": [
+        {
+          "file": "lumi/dizzy_0.jpg",
+          "bytes": 4249,
+          "sha256": "a7447d52bd704cf02d534fcd86d9824d902407257cd8e4a59efb74c9f5564207",
+          "crc32": 3307811494
+        },
+        {
+          "file": "lumi/dizzy_1.jpg",
+          "bytes": 4284,
+          "sha256": "d49c8e739f28e2179183de9abbc162649f80956b438592654d78d3fbd6689a89",
+          "crc32": 1603660880
+        },
+        {
+          "file": "lumi/dizzy_2.jpg",
+          "bytes": 4443,
+          "sha256": "d4b6f19fb9e1ee31d0e40496ff4ed56caceddfbb1411cbfd9923b9650e0a640f",
+          "crc32": 1119302170
+        },
+        {
+          "file": "lumi/dizzy_3.jpg",
+          "bytes": 4647,
+          "sha256": "db8dd85272893d13e28bdddcbac2c3ac48b24f514a6037a73a05d52b82db1b86",
+          "crc32": 3348194295
+        },
+        {
+          "file": "lumi/dizzy_4.jpg",
+          "bytes": 4690,
+          "sha256": "5306f1e9bd5b011df1b302199eeb19effde4502f24b648ee1a44ddea80913bd7",
+          "crc32": 2180513111
+        },
+        {
+          "file": "lumi/dizzy_5.jpg",
+          "bytes": 4575,
+          "sha256": "25a45aa4f3c5a58dc3ba977020008374996718f734e01814f9f35013958cb6eb",
+          "crc32": 2259060203
+        },
+        {
+          "file": "lumi/dizzy_6.jpg",
+          "bytes": 4399,
+          "sha256": "fed258cc9686457f915f340870c4828f24797d6076f111b5a469681e781b371a",
+          "crc32": 81111854
+        },
+        {
+          "file": "lumi/dizzy_7.jpg",
+          "bytes": 4309,
+          "sha256": "4f1240c7ce99c27746b1dd59dd2e9b894d222d59cab06d930dd345f1cac571f7",
+          "crc32": 1380359963
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "key": "dance",
+      "title": "轻快舞蹈",
+      "source": "local",
+      "trigger": "实际已授权舞蹈时的画面；展示库只播图片",
+      "playback": "loop",
+      "frames": [
+        {
+          "file": "lumi/dance_0.jpg",
+          "bytes": 4230,
+          "sha256": "81357a3657805a59e091409ed0ee30ffd67e5f88c632aa8fa55e2e9e719b1633",
+          "crc32": 3062642406
+        },
+        {
+          "file": "lumi/dance_1.jpg",
+          "bytes": 4305,
+          "sha256": "a6c4c0c5b7cceba3053fb959c8ccf08755fffc917cef253af86e82dbd46f2c8a",
+          "crc32": 3386864651
+        },
+        {
+          "file": "lumi/dance_2.jpg",
+          "bytes": 4066,
+          "sha256": "5901b772c6e2d6016d02da9d51261a228a82ad5761b8c26150962a7fab57dec2",
+          "crc32": 3513418591
+        },
+        {
+          "file": "lumi/dance_3.jpg",
+          "bytes": 4143,
+          "sha256": "269facbb35253da0e5efe4b5974334aa3ffc63b469a40e668a3e55803e41b7e9",
+          "crc32": 362177374
+        },
+        {
+          "file": "lumi/dance_4.jpg",
+          "bytes": 4309,
+          "sha256": "e2cb41a4b8df150834cdf5417e9f8ea56668bcfd60c0732b143b26734cd01ec6",
+          "crc32": 636347423
+        },
+        {
+          "file": "lumi/dance_5.jpg",
+          "bytes": 3979,
+          "sha256": "7191fc0087f8ffc6e8cac89b96a138851fdc4a3d2db8fbd9dbd626b194f966e9",
+          "crc32": 4025648829
+        },
+        {
+          "file": "lumi/dance_6.jpg",
+          "bytes": 4199,
+          "sha256": "4a99d38ab17e09087ec712b79b97c8239c5c43810f78a45022390863d151abe4",
+          "crc32": 1065419088
+        },
+        {
+          "file": "lumi/dance_7.jpg",
+          "bytes": 4232,
+          "sha256": "b1f8fff98a391ec8ecdef45d18a8cbfc2d7590b3b2d14c5328147d3101580edc",
+          "crc32": 3018200553
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "key": "stretch",
+      "title": "伸个懒腰",
+      "source": "preview",
+      "trigger": "生活展示库，不启动机械伸展",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/stretch_0.jpg",
+          "bytes": 4040,
+          "sha256": "f9d62f1990cc54b07496a3be4be4462d4a6421f8deac89b52f8b3cbf282e080d",
+          "crc32": 1362588402
+        },
+        {
+          "file": "lumi/stretch_1.jpg",
+          "bytes": 4221,
+          "sha256": "108088d79281c3cff887e9f59bcf94f20a58d51f5270bfeb27a9ca44b1a3057e",
+          "crc32": 2997818438
+        },
+        {
+          "file": "lumi/stretch_2.jpg",
+          "bytes": 4179,
+          "sha256": "311951a1ec9c3648fffe6723004ccff8b90ae5876081ebf175061df848b3ea23",
+          "crc32": 2534853598
+        },
+        {
+          "file": "lumi/stretch_3.jpg",
+          "bytes": 3875,
+          "sha256": "23f579abd1109e6399f7fd1cdce981655954ba3e0aeb75d65138c4806ea0b4c1",
+          "crc32": 578284852
+        },
+        {
+          "file": "lumi/stretch_4.jpg",
+          "bytes": 3908,
+          "sha256": "844f21c16ee90b7e747701e0ef44e736cbd4cc3206296f89547ac9d52475069c",
+          "crc32": 105918793
+        },
+        {
+          "file": "lumi/stretch_5.jpg",
+          "bytes": 4160,
+          "sha256": "b636cc821f992af8621d33cf8f03f6ed19c68ae93f1fa1e9b1169e64d48ca812",
+          "crc32": 2493574672
+        },
+        {
+          "file": "lumi/stretch_6.jpg",
+          "bytes": 4021,
+          "sha256": "6ac3a361603d9e3cfa7f34ede483c64af04f903372dbab7535ff5010d55c6676",
+          "crc32": 2343169754
+        },
+        {
+          "file": "lumi/stretch_7.jpg",
+          "bytes": 4046,
+          "sha256": "f4138578117404fbb4db58c846d858231d3b1c6e1dc4bef7dc466e56a79cb428",
+          "crc32": 2868446357
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "key": "coffee",
+      "title": "休息片刻",
+      "source": "preview",
+      "trigger": "生活展示库，不表示提醒或日历已接入",
+      "playback": "pingpong",
+      "frames": [
+        {
+          "file": "lumi/coffee_0.jpg",
+          "bytes": 4112,
+          "sha256": "0bdf8d11e32c311275c3526af86a297ef5276cb084ce8a98c743871635036688",
+          "crc32": 914080262
+        },
+        {
+          "file": "lumi/coffee_1.jpg",
+          "bytes": 4149,
+          "sha256": "21b8eb1f5b4d7080d3754df2a8e6274ad58c96c7369b84ce05d3238ab75f4e40",
+          "crc32": 1780519080
+        },
+        {
+          "file": "lumi/coffee_2.jpg",
+          "bytes": 4185,
+          "sha256": "15e7b52511db7d6131f18dc79f2d2a1d2130cd519d230895aeb3f66347b95473",
+          "crc32": 3853244955
+        },
+        {
+          "file": "lumi/coffee_3.jpg",
+          "bytes": 4164,
+          "sha256": "5d4e24df7b9b41fc37dde13d22f8b5c038379a0dbbd5a293a1287d739b9d0517",
+          "crc32": 4215080650
+        },
+        {
+          "file": "lumi/coffee_4.jpg",
+          "bytes": 4151,
+          "sha256": "bf18c5ad98447a26ed14dd8ce2271dd433aa7067b067816a4f49029a2c180424",
+          "crc32": 1466464775
+        },
+        {
+          "file": "lumi/coffee_5.jpg",
+          "bytes": 4148,
+          "sha256": "5aab2c1188cc896e482258333ecfdb3bc0d36b376422fc74022727c912dbee2d",
+          "crc32": 3569920617
+        },
+        {
+          "file": "lumi/coffee_6.jpg",
+          "bytes": 4115,
+          "sha256": "e95bcd0c1ad413a6fb218789ebce57eef256812ab936095a81087991f7a9e0aa",
+          "crc32": 2222098362
+        },
+        {
+          "file": "lumi/coffee_7.jpg",
+          "bytes": 4128,
+          "sha256": "3b52c695e5f62e967d941d9a7b25575b24bb28b01cc5798b3242d74c01b4f305",
+          "crc32": 3789289525
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "key": "welcome",
+      "title": "见面招呼",
+      "source": "local",
+      "trigger": "开机短暂本地招呼；底部仍显示真实连接来源",
+      "playback": "once",
+      "frames": [
+        {
+          "file": "lumi/welcome_0.jpg",
+          "bytes": 4058,
+          "sha256": "1147db0a5e5b1fbca3388db6306b7a34419f75dfd6703c609c66512492076eb2",
+          "crc32": 3693652527
+        },
+        {
+          "file": "lumi/welcome_1.jpg",
+          "bytes": 4121,
+          "sha256": "f88287138d2bf44a8c1fcb968be40f4dd9aa9dafc344f0e4ff8937ff6e6373fa",
+          "crc32": 4154229076
+        },
+        {
+          "file": "lumi/welcome_2.jpg",
+          "bytes": 4277,
+          "sha256": "8b2014c2c3d0f2b20e84fe25b4a0ff54a437300e49c33dac61a070f432bb388b",
+          "crc32": 1928588084
+        },
+        {
+          "file": "lumi/welcome_3.jpg",
+          "bytes": 4116,
+          "sha256": "436ac3620c66d8266491a518067cb9efce748fa504b77dd0280debb1b8bda8d4",
+          "crc32": 4185848746
+        },
+        {
+          "file": "lumi/welcome_4.jpg",
+          "bytes": 4199,
+          "sha256": "9b246d01349a1618562553fa77ca065eaadff353b0e44a4029823c29b3b8d95c",
+          "crc32": 1748123654
+        },
+        {
+          "file": "lumi/welcome_5.jpg",
+          "bytes": 4107,
+          "sha256": "fecc28c585bddd2924119e11f28af7f99b2fa81e5a70a1aaf5bd38a446047e2d",
+          "crc32": 1198769691
+        },
+        {
+          "file": "lumi/welcome_6.jpg",
+          "bytes": 4105,
+          "sha256": "e05d920ff70a7341a459c8cf1bdee9b89837f7cd9261e4e7c55fc8a1d249178c",
+          "crc32": 1159692575
+        },
+        {
+          "file": "lumi/welcome_7.jpg",
+          "bytes": 4038,
+          "sha256": "42a4df72c2cdacc4eab94688fb1757cb3d4c96e60e2033bd6ed0e049277f5aa6",
+          "crc32": 1290413222
+        }
+      ]
+    }
+  ],
+  "total_bytes": 599184,
+  "complete": true
+}

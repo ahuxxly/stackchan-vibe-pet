@@ -1,0 +1,24 @@
+# Private credentials and device state
+.env
+.env.*
+!.env.example
+**/config_private.h
+*.pem
+*.key
+backups/
+evidence/
+design/
+# Generated tools, packages, images and caches
+.venv/
+.toolchain/
+.pio/
+.test-bin/
+.native-tools/
+downloads/
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Sources fetched and verified by the filesystem build
+vendor/mklittlefs/
